@@ -1,4 +1,4 @@
-const CACHE_NAME = 'manager-v1';
+const CACHE_NAME = 'manager-v2';
 const ASSETS = [
   '/mytaskmanagerapp/manager.html',
   '/mytaskmanagerapp/manifest.json',
