@@ -293,7 +293,10 @@
             font-weight: 500;
             cursor: pointer;
             word-break: break-word;
-            min-width: 130px;
+        }
+
+        .task-cell {
+            min-width: 15ch;
         }
 
         .task-name:hover {
@@ -1162,7 +1165,7 @@
 
                     row.innerHTML = `
                         <td><input type="checkbox" class="checkbox" ${task.status ? 'checked' : ''} onchange="app.toggleStatus(${task.id}, this)" /></td>
-                        <td onclick="app.openEditModal(${task.id})" style="cursor:pointer;"><span class="task-name">${this.escapeHtml(task.task)}</span>${task.description ? `<div class="task-description-preview">${this.escapeHtml(task.description)}</div>` : ''}</td>
+                        <td class="task-cell" onclick="app.openEditModal(${task.id})" style="cursor:pointer;"><span class="task-name">${this.escapeHtml(task.task)}</span>${task.description ? `<div class="task-description-preview">${this.escapeHtml(task.description)}</div>` : ''}</td>
                         <td><div class="day-pills">${pills}</div></td>
                         <td><span class="due-date-text">${task.dueDate ? new Date(task.dueDate + 'T00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : ''}</span></td>
                     `;
