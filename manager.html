@@ -304,10 +304,7 @@
             color: #6b6059;
             margin-top: 3px;
             line-height: 1.4;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            max-width: 400px;
+            word-break: break-word;
         }
 
         /* Custom Checkbox */
@@ -348,8 +345,8 @@
         /* Day Pills */
         .day-pills {
             display: flex;
-            flex-wrap: wrap;
-            gap: 4px;
+            flex-wrap: nowrap;
+            gap: 3px;
         }
 
         .day-pill {
